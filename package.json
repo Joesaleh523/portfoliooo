@@ -2,13 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-"scripts": {
-  "dev": "npx vite", 
-  "build": "npx vite build",  
-  "predeploy": "npm run build", 
-  "deploy": "gh-pages -d dist"  
-}
-,
+  "scripts": {
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "preview": "node node_modules/vite/bin/vite.js preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
