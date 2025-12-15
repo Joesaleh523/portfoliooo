@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "private": true,
 "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+  "dev": "npx vite", 
+  "build": "npx vite build",  
+  "predeploy": "npm run build", 
+  "deploy": "gh-pages -d dist"  
 }
 ,
   "dependencies": {
