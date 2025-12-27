@@ -4,7 +4,6 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import Contact from './pages/Contact.jsx';
-import ThemeToggle from './components/ThemeToggle.jsx';
 
 export default function App(){
   const [dark,setDark] = useState(()=>{
@@ -26,7 +25,6 @@ export default function App(){
             <Link to="/projects" className="hidden md:inline-block">Projects</Link>
             <Link to="/about" className="hidden md:inline-block">About</Link>
             <Link to="/contact" className="hidden md:inline-block">Contact</Link>
-            <ThemeToggle dark={dark} setDark={setDark}/>
           </div>
         </nav>
       </header>

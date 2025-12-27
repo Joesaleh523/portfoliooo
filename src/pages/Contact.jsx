@@ -10,11 +10,11 @@ export default function Contact() {
     e.preventDefault();
     setStatus('sending');
     setErrorMessage('');
-    
-    // استخدام environment variables بدلاً من مفاتيح واضحة في الكود
-    const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-    const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    // المفاتيح مكتوبة مباشرة
+    const SERVICE_ID = 'service_j4hm5ow';
+    const TEMPLATE_ID = 'template_uge8byq';
+    const PUBLIC_KEY = 'xgj0UWufxyBv64edO';
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(() => {
@@ -67,7 +67,6 @@ export default function Contact() {
         </div>
       </form>
 
-      {/* عرض رسالة خطأ إذا كان فيه */}
       {errorMessage && (
         <div className="mt-4 text-red-500">
           {errorMessage}
@@ -75,10 +74,8 @@ export default function Contact() {
       )}
 
       <p className="text-sm text-gray-500 mt-4">
-        Replace Service/Template/Public key with your EmailJS keys. 
         Messages will be sent to <b>Yousefsalehtwfiq202121623@gmail.com</b>.
       </p>
     </section>
   );
 }
-
