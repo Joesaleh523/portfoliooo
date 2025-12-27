@@ -7,7 +7,7 @@ export default function Projects() {
       title: "E-Commerce final project ",
       desc: "",
       tech: [],
-      image: "/images/Screenshot 2025-12-26 021235.png",
+      image:"/public/images/Screenshot20251-26-021235.png",
       live: "https://e-commerce-final-project-jsrt.vercel.app/Login",
       repo: "https://github.com/Joesaleh523/e-commerce-final-project",
     },
@@ -16,7 +16,7 @@ export default function Projects() {
       title: "daniels project ",
       desc: "",
       tech: [],
-      image: "/images/Screenshot 2025-12-26 022837.png",
+      image: "/public/images/Screenshot2025-12-26022837.png",
       live: "https://joesaleh523.github.io/daniels-exam1",
       repo: "https://github.com/Joesaleh523/daniels-exam1",
     },
@@ -24,7 +24,7 @@ export default function Projects() {
       title: "smart login system ",
       desc: "",
       tech: [],
-      image: "/images/Screenshot 2025-12-26 023155.png",
+      image: "/public/images/Screenshot20251-26023155.png",
       live: "https://joesaleh523.github.io/smart-login-system-task-9/",
       repo: "https://github.com/Joesaleh523/smart-login-system-task-9",
     },
@@ -47,7 +47,7 @@ export default function Projects() {
         shadow-lg
         hover:-translate-y-2 hover:shadow-2xl
         transition-all duration-300
-      "
+      " 
     >
       {/* Image */}
       <a
