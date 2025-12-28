@@ -32,24 +32,21 @@ export default function Contact() {
   };
 
   return (
-    <section
-      className="relative min-h-screen px-6 py-28 overflow-hidden
-      bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white"
-    >
-      {/* Glow */}
-      <div
-        className="absolute top-1/2 left-1/2 w-[600px] h-[600px]
-        -translate-x-1/2 -translate-y-1/2 rounded-full
-        bg-blue-600/20 blur-[140px]"
-      />
+    <section className="relative min-h-screen px-4 sm:px-6 py-24 overflow-hidden
+      bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white">
 
-      <div className="relative max-w-2xl mx-auto">
+      {/* Glow */}
+      <div className="absolute top-1/2 left-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px]
+        -translate-x-1/2 -translate-y-1/2 rounded-full
+        bg-blue-600/20 blur-[140px]" />
+
+      <div className="relative max-w-xl mx-auto w-full">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-extrabold mb-6 text-center"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-center"
         >
           Contact{" "}
           <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
@@ -61,35 +58,30 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-300 text-center mb-12 "
+          className="text-gray-300 text-center mb-10 text-sm sm:text-base"
         >
           hello a5y karim send me 👋
         </motion.p>
 
-        {/* Form Card */}
+        {/* Form */}
         <motion.form
           ref={form}
           onSubmit={sendEmail}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="
-            rounded-3xl p-8 space-y-6
+          className="rounded-3xl p-6 sm:p-8 space-y-5
             bg-white/5 backdrop-blur
-            border border-white/10
-            shadow-xl
-          "
+            border border-white/10 shadow-xl"
         >
           <input
             name="from_name"
             required
             placeholder="Your Name"
-            className="
-              w-full p-4 rounded-xl
+            className="w-full p-3 sm:p-4 rounded-xl
               bg-black/40 border border-white/10
               text-white placeholder-gray-400
-              focus:outline-none focus:border-blue-500
-            "
+              focus:outline-none focus:border-blue-500"
           />
 
           <input
@@ -97,56 +89,49 @@ export default function Contact() {
             type="email"
             required
             placeholder="Your Email"
-            className="
-              w-full p-4 rounded-xl
+            className="w-full p-3 sm:p-4 rounded-xl
               bg-black/40 border border-white/10
               text-white placeholder-gray-400
-              focus:outline-none focus:border-blue-500
-            "
+              focus:outline-none focus:border-blue-500"
           />
 
           <textarea
             name="message"
             required
-            rows="6"
+            rows="5"
             placeholder="Your Message"
-            className="
-              w-full p-4 rounded-xl
+            className="w-full p-3 sm:p-4 rounded-xl
               bg-black/40 border border-white/10
               text-white placeholder-gray-400
               focus:outline-none focus:border-blue-500
-              resize-none
-            "
+              resize-none"
           />
 
           {/* Button + Status */}
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             <button
               type="submit"
               disabled={status === "sending"}
-              className="
-                flex items-center gap-2 px-6 py-3 rounded-xl
+              className="flex justify-center items-center gap-2
+                px-6 py-3 rounded-xl
                 bg-gradient-to-r from-blue-600 to-cyan-500
                 hover:scale-105 transition font-medium
-                disabled:opacity-50
-              "
+                disabled:opacity-50"
             >
               <Send size={18} />
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>
 
             {status === "sent" && (
-              <span className="text-green-400">Message sent ✅</span>
+              <span className="text-green-400 text-sm">Message sent ✅</span>
             )}
             {status === "error" && (
-              <span className="text-red-400">Failed ❌</span>
+              <span className="text-red-400 text-sm">Failed ❌</span>
             )}
           </div>
 
           {errorMessage && (
-            <div className="text-red-400 text-sm">
-              {errorMessage}
-            </div>
+            <div className="text-red-400 text-sm">{errorMessage}</div>
           )}
         </motion.form>
 
@@ -155,11 +140,11 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="mt-8 text-center text-gray-400 text-sm"
+          className="mt-8 text-center text-gray-400 text-xs sm:text-sm"
         >
           <Mail className="inline mr-2" size={16} />
           Messages will be sent to{" "}
-          <span className="text-white font-medium">
+          <span className="text-white font-medium break-all">
             Yousefsalehtwfiq202121623@gmail.com
           </span>
         </motion.div>

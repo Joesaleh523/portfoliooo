@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <section
-      className="relative min-h-screen px-6 py-28 overflow-hidden
+      className="relative min-h-screen px-4 sm:px-6 py-24 sm:py-28 overflow-hidden
       bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white"
     >
       {/* Glow */}
       <div
-        className="absolute top-1/2 left-1/2 w-[600px] h-[600px]
+        className="absolute top-1/2 left-1/2 w-[420px] h-[420px] sm:w-[600px] sm:h-[600px]
         -translate-x-1/2 -translate-y-1/2 rounded-full
         bg-blue-600/20 blur-[140px]"
       />
@@ -20,11 +20,13 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-extrabold mb-10"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 sm:mb-10"
         >
           About{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-cyan-300 
-            bg-clip-text text-transparent">
+          <span
+            className="bg-gradient-to-r from-blue-400 to-cyan-300
+            bg-clip-text text-transparent"
+          >
             Me
           </span>
         </motion.h2>
@@ -34,7 +36,8 @@ export default function About() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-300 leading-relaxed mb-16 max-w-3xl"
+          className="text-gray-300 leading-relaxed mb-14 max-w-3xl
+          text-sm sm:text-base"
         >
           Front-End React Developer with a strong focus on clean code,
           responsive design, and performance. Experienced in building
@@ -47,9 +50,8 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8"
         >
-          {/* Card */}
           {[
             {
               title: "Soft Skills",
@@ -88,16 +90,18 @@ export default function About() {
               whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 200 }}
               className="
-                rounded-3xl p-8
+                rounded-3xl p-6 sm:p-8
                 bg-white/5 backdrop-blur
                 border border-white/10
                 shadow-lg
               "
             >
-              <h3 className="text-xl font-semibold mb-6 text-white">
+              <h3 className="text-lg sm:text-xl font-semibold mb-5 text-white">
                 {skill.title}
               </h3>
-              <ul className="space-y-3 text-gray-300 list-disc ml-5">
+
+              <ul className="space-y-3 text-gray-300 list-disc ml-5
+                text-sm sm:text-base">
                 {skill.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
