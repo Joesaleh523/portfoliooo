@@ -60,7 +60,7 @@ export default function Contact() {
           transition={{ delay: 0.2 }}
           className="text-gray-300 text-center mb-10 text-sm sm:text-base"
         >
-          hello a5y karim send me 👋
+         
         </motion.p>
 
         {/* Form */}
